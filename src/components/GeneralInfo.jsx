@@ -1,5 +1,19 @@
+import { useState } from "react";
+
 function GeneralInfo() {
-    return <h1>General Info</h1>;
+    const [input, setInput] = useState("");
+    function handleInput(input) {
+        setInput(input);
+    }
+    return (
+        <>
+            <input
+                value={input}
+                onChange={(e) => handleInput(e.target.value)}
+            />
+            <h1>{input}</h1>
+        </>
+    );
 }
 
 export default GeneralInfo;

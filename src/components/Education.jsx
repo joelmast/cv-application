@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 function Education() {
-    const [educationInfo, setEducationInfo] = useState({
-        schoolName: "",
-        studyTitle: "",
-        studyDate: "",
-    });
+    const [educationInfo, setEducationInfo] = useState([
+        {
+            schoolName: "",
+            studyTitle: "",
+            studyDate: "",
+        },
+    ]);
     function handleInput(e) {
         const { name, value } = e.target;
         setEducationInfo({

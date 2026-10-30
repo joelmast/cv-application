@@ -19,7 +19,7 @@ function Experience() {
 
     return (
         <>
-            <h1>Education</h1>
+            <h1>Experience</h1>
             <input
                 type="text"
                 name="companyName"

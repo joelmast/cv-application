@@ -95,9 +95,6 @@ function Education() {
                     >
                         Delete
                     </button>
-                    <h1>{item.schoolName}</h1>
-                    <h1>{item.studyTitle}</h1>
-                    <h1>{item.studyDate}</h1>
                 </div>
             ))}
         </>

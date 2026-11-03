@@ -1,0 +1,32 @@
+#root {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 20px;
+    min-height: 100vh;
+}
+
+.generalInfo-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.general-info-title {
+    width: 100%;
+}
+
+body {
+    background-color: #011c27;
+}
+
+h1 {
+    color: #fecee9;
+}
+
+label {
+    color: #fecee9;
+}
+
+.cvPreview-div {
+    border: 5px solid #545677;
+}

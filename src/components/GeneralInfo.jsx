@@ -15,36 +15,38 @@ function GeneralInfo() {
     }
     return (
         <>
-            <h1>General Info</h1>
+            <div className="generalInfo-div">
+                <h1 className="general-info-title">General Info</h1>
 
-            <label>
-                Name:
-                <input
-                    name="name"
-                    value={generalInfo.name}
-                    onChange={(e) => handleInput(e)}
-                />
-            </label>
+                <label>
+                    Name:
+                    <input
+                        name="name"
+                        value={generalInfo.name}
+                        onChange={(e) => handleInput(e)}
+                    />
+                </label>
 
-            <label>
-                Email:
-                <input
-                    name="email"
-                    type="email"
-                    value={generalInfo.email}
-                    onChange={(e) => handleInput(e)}
-                />
-            </label>
+                <label>
+                    Email:
+                    <input
+                        name="email"
+                        type="email"
+                        value={generalInfo.email}
+                        onChange={(e) => handleInput(e)}
+                    />
+                </label>
 
-            <label>
-                Phone:
-                <input
-                    name="phone"
-                    type="tel"
-                    value={generalInfo.phone}
-                    onChange={(e) => handleInput(e)}
-                />
-            </label>
+                <label>
+                    Phone:
+                    <input
+                        name="phone"
+                        type="tel"
+                        value={generalInfo.phone}
+                        onChange={(e) => handleInput(e)}
+                    />
+                </label>
+            </div>
         </>
     );
 }

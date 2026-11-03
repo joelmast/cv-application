@@ -8,9 +8,11 @@ import CvPreview from "./components/CvPreview";
 function App() {
     return (
         <>
-            <GeneralInfo />
-            <Education />
-            <Experience />
+            <div>
+                <GeneralInfo />
+                <Education />
+                <Experience />
+            </div>
             <CvPreview />
         </>
     );

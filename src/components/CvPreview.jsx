@@ -1,5 +1,9 @@
 function CvPreview() {
-    return <h1>CvPreview</h1>;
+    return (
+        <div className="cvPreview-div">
+            <h1>CvPreview</h1>;
+        </div>
+    );
 }
 
 export default CvPreview;

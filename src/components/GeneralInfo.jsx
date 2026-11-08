@@ -8,14 +8,12 @@ function GeneralInfo({ onUpdate }) {
     });
     function handleInput(e) {
         const { name, value } = e.target;
-        setGeneralInfo({
+        const updatedInfo = {
             ...generalInfo,
             [name]: value,
-        });
-        onUpdate({
-            ...generalInfo,
-            [name]: value,
-        });
+        };
+        setGeneralInfo(updatedInfo);
+        onUpdate(updatedInfo);
     }
     return (
         <>

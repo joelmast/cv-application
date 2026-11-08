@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Education() {
+function Education({ onUpdate }) {
     const [educationInfo, setEducationInfo] = useState([
         {
             id: crypto.randomUUID(),
@@ -16,15 +16,17 @@ function Education() {
         setEducationInfo(
             educationInfo.map((item) => {
                 if (item.id === id) {
+                    onUpdate({ ...item, [name]: value });
                     return { ...item, [name]: value };
                 }
+                onUpdate(item);
                 return item;
             }),
         );
     }
 
     function newInput() {
-        setEducationInfo([
+        let newEducation = [
             ...educationInfo,
             {
                 id: crypto.randomUUID(),
@@ -32,14 +34,26 @@ function Education() {
                 studyTitle: "",
                 studyDate: "",
             },
-        ]);
+        ];
+
+        setEducationInfo(newEducation);
+        onUpdate(newEducation);
     }
 
     function handleDelete(id) {
         if (educationInfo.length > 1) {
             setEducationInfo(educationInfo.filter((item) => item.id !== id));
+            onUpdate(educationInfo.filter((item) => item.id !== id));
         } else {
             setEducationInfo([
+                {
+                    id: crypto.randomUUID(),
+                    schoolName: "",
+                    studyTitle: "",
+                    studyDate: "",
+                },
+            ]);
+            onUpdate([
                 {
                     id: crypto.randomUUID(),
                     schoolName: "",

@@ -14,10 +14,13 @@ function App() {
         <>
             <div>
                 <GeneralInfo onUpdate={setGeneralInfo} />
-                <Education />
+                <Education onUpdate={setEducationInfo} />
                 <Experience />
             </div>
-            <CvPreview generalInfo={generalInfo} />
+            <CvPreview
+                generalInfo={generalInfo}
+                educationInfo={educationInfo}
+            />
         </>
     );
 }

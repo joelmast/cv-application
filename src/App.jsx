@@ -6,14 +6,18 @@ import Experience from "./components/Experience";
 import CvPreview from "./components/CvPreview";
 
 function App() {
+    const [generalInfo, setGeneralInfo] = useState({});
+    const [educationInfo, setEducationInfo] = useState({});
+    const [experienceInfo, setExperienceInfo] = useState({});
+
     return (
         <>
             <div>
-                <GeneralInfo />
+                <GeneralInfo onUpdate={setGeneralInfo} />
                 <Education />
                 <Experience />
             </div>
-            <CvPreview />
+            <CvPreview generalInfo={generalInfo} />
         </>
     );
 }

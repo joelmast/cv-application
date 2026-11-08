@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function GeneralInfo() {
+function GeneralInfo({ onUpdate }) {
     const [generalInfo, setGeneralInfo] = useState({
         name: "",
         email: "",
@@ -9,6 +9,10 @@ function GeneralInfo() {
     function handleInput(e) {
         const { name, value } = e.target;
         setGeneralInfo({
+            ...generalInfo,
+            [name]: value,
+        });
+        onUpdate({
             ...generalInfo,
             [name]: value,
         });

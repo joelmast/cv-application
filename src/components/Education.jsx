@@ -16,7 +16,7 @@ function Education({ onUpdate }) {
         setEducationInfo(
             educationInfo.map((item) => {
                 if (item.id === id) {
-                    onUpdate({ ...item, [name]: value });
+                    onUpdate([{ ...item, [name]: value }]);
                     return { ...item, [name]: value };
                 }
                 onUpdate(item);
@@ -35,9 +35,9 @@ function Education({ onUpdate }) {
                 studyDate: "",
             },
         ];
-
-        setEducationInfo(newEducation);
+        console.log(newEducation);
         onUpdate(newEducation);
+        setEducationInfo(newEducation);
     }
 
     function handleDelete(id) {

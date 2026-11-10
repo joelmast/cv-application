@@ -12,9 +12,13 @@ function CvPreview({ generalInfo, educationInfo }) {
             </div>
 
             <div className="education-info-preview">
-                <h1>{educationInfo.schoolName}</h1>
-                <h1>{educationInfo.studyTitle}</h1>
-                <h1>{educationInfo.studyDate}</h1>
+                {educationInfo.map((item) => (
+                    <div className="education-item" key={item.id}>
+                        <h1>{item.schoolName}</h1>
+                        <h1>{item.studyTitle}</h1>
+                        <h1>{item.studyDate}</h1>
+                    </div>
+                ))}
             </div>
         </div>
     );

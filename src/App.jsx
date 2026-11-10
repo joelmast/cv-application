@@ -6,9 +6,27 @@ import Experience from "./components/Experience";
 import CvPreview from "./components/CvPreview";
 
 function App() {
-    const [generalInfo, setGeneralInfo] = useState({});
-    const [educationInfo, setEducationInfo] = useState({});
-    const [experienceInfo, setExperienceInfo] = useState({});
+    const [generalInfo, setGeneralInfo] = useState({
+        name: "",
+        email: "",
+        phone: "",
+    });
+    const [educationInfo, setEducationInfo] = useState([
+        {
+            id: crypto.randomUUID(),
+            schoolName: "",
+            studyTitle: "",
+            studyDate: "",
+        },
+    ]);
+    const [experienceInfo, setExperienceInfo] = useState({
+        id: crypto.randomUUID(),
+        companyName: "",
+        position: "",
+        responsibilities: "",
+        startDate: "",
+        endDate: "",
+    });
 
     return (
         <>

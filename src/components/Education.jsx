@@ -13,16 +13,15 @@ function Education({ onUpdate }) {
     // Updates values of specific education entry's
     function handleInput(e, id) {
         const { name, value } = e.target;
-        setEducationInfo(
-            educationInfo.map((item) => {
-                if (item.id === id) {
-                    onUpdate([{ ...item, [name]: value }]);
-                    return { ...item, [name]: value };
-                }
-                onUpdate(item);
-                return item;
-            }),
-        );
+        const updatedEducation = educationInfo.map((item) => {
+            if (item.id === id) {
+                return { ...item, [name]: value };
+            }
+            return item;
+        });
+
+        setEducationInfo(updatedEducation);
+        onUpdate(updatedEducation);
     }
 
     function newInput() {

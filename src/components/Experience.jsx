@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Experience() {
+function Experience({ onUpdate }) {
     const [experienceInfo, setExperienceInfo] = useState([
         {
             id: crypto.randomUUID(),
@@ -14,18 +14,20 @@ function Experience() {
 
     function handleInput(e, id) {
         const { name, value } = e.target;
-        setExperienceInfo(
-            experienceInfo.map((item) => {
-                if (item.id === id) {
-                    return { ...item, [name]: value };
-                }
-                return item;
-            }),
-        );
+
+        const updatedExperience = experienceInfo.map((item) => {
+            if (item.id === id) {
+                return { ...item, [name]: value };
+            }
+            return item;
+        });
+
+        setExperienceInfo(updatedExperience);
+        onUpdate(updatedExperience);
     }
 
     function newInput() {
-        setExperienceInfo([
+        let newExperience = [
             ...experienceInfo,
             {
                 id: crypto.randomUUID(),
@@ -35,14 +37,18 @@ function Experience() {
                 startDate: "",
                 endDate: "",
             },
-        ]);
+        ];
+
+        setExperienceInfo(newExperience);
+        onUpdate(newExperience);
     }
 
     function handleDelete(id) {
         if (experienceInfo.length > 1) {
             setExperienceInfo(experienceInfo.filter((item) => item.id !== id));
+            onUpdate(experienceInfo.filter((item) => item.id !== id));
         } else {
-            setExperienceInfo([
+            let deletedExperience = [
                 {
                     id: crypto.randomUUID(),
                     companyName: "",
@@ -51,7 +57,9 @@ function Experience() {
                     startDate: "",
                     endDate: "",
                 },
-            ]);
+            ];
+            setExperienceInfo(deletedExperience);
+            onUpdate(deletedExperience);
         }
     }
 

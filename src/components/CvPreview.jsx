@@ -2,7 +2,7 @@
 // import Education from "./components/Education";
 // import Experience from "./components/Experience";
 
-function CvPreview({ generalInfo, educationInfo }) {
+function CvPreview({ generalInfo, educationInfo, experienceInfo }) {
     return (
         <div className="cvPreview-div">
             <div className="general-info-preview">
@@ -17,6 +17,18 @@ function CvPreview({ generalInfo, educationInfo }) {
                         <h1>{item.schoolName}</h1>
                         <h1>{item.studyTitle}</h1>
                         <h1>{item.studyDate}</h1>
+                    </div>
+                ))}
+            </div>
+
+            <div className="experience-info-preview">
+                {experienceInfo.map((item) => (
+                    <div className="experience-item" key={item.id}>
+                        <h1>{item.companyName}</h1>
+                        <h1>{item.position}</h1>
+                        <h1>{item.responsibilities}</h1>
+                        <h1>{item.startDate}</h1>
+                        <h1>{item.endDate}</h1>
                     </div>
                 ))}
             </div>

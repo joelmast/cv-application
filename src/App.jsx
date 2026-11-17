@@ -19,25 +19,28 @@ function App() {
             studyDate: "",
         },
     ]);
-    const [experienceInfo, setExperienceInfo] = useState({
-        id: crypto.randomUUID(),
-        companyName: "",
-        position: "",
-        responsibilities: "",
-        startDate: "",
-        endDate: "",
-    });
+    const [experienceInfo, setExperienceInfo] = useState([
+        {
+            id: crypto.randomUUID(),
+            companyName: "",
+            position: "",
+            responsibilities: "",
+            startDate: "",
+            endDate: "",
+        },
+    ]);
 
     return (
         <>
             <div>
                 <GeneralInfo onUpdate={setGeneralInfo} />
                 <Education onUpdate={setEducationInfo} />
-                <Experience />
+                <Experience onUpdate={setExperienceInfo} />
             </div>
             <CvPreview
                 generalInfo={generalInfo}
                 educationInfo={educationInfo}
+                experienceInfo={experienceInfo}
             />
         </>
     );

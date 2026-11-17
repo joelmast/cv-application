@@ -34,7 +34,7 @@ function Education({ onUpdate }) {
                 studyDate: "",
             },
         ];
-        console.log(newEducation);
+        // console.log(newEducation);
         onUpdate(newEducation);
         setEducationInfo(newEducation);
     }

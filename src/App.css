@@ -31,6 +31,7 @@ label {
 
 .cvPreview-div {
     border: 5px solid #545677;
+    background-color: #001024;
 }
 
 input {
@@ -47,4 +48,23 @@ input {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.name {
+    color: #eb9fef;
+}
+
+p {
+    color: #eb9fef;
+    padding-left: 4%;
+}
+
+.contact-h2 {
+    color: #eb9fef;
+    padding-left: 2%;
+}
+
+.education-h2 {
+    color: #eb9fef;
+    padding-left: 2%;
 }

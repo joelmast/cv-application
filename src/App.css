@@ -64,7 +64,63 @@ p {
     padding-left: 2%;
 }
 
+.contact-info {
+    border-bottom: 2px solid #03254e;
+}
+
 .education-h2 {
     color: #eb9fef;
     padding-left: 2%;
+}
+
+.education-item {
+    border-bottom: 2px solid #03254e;
+}
+
+.experience-dates {
+    position: relative;
+    padding-left: 30px;
+}
+
+.start-date-experience {
+    position: relative;
+}
+.end-date-experience {
+    position: relative;
+}
+
+.start-date-experience::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    background-color: #eb9fef;
+}
+
+.end-date-experience::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    background-color: #eb9fef;
+}
+
+.start-date-experience::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #eb9fef;
+    top: 50%;
+    left: 11px;
+    height: 40px;
 }

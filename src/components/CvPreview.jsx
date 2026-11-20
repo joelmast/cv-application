@@ -28,11 +28,19 @@ function CvPreview({ generalInfo, educationInfo, experienceInfo }) {
             <div className="experience-info-preview">
                 {experienceInfo.map((item) => (
                     <div className="experience-item" key={item.id}>
-                        <h1>{item.companyName}</h1>
-                        <h1>{item.position}</h1>
-                        <h1>{item.responsibilities}</h1>
-                        <h1>{item.startDate}</h1>
-                        <h1>{item.endDate}</h1>
+                        <p>Name of Company: {item.companyName}</p>
+                        <p>Name of Position: {item.position}</p>
+                        <p>
+                            Responsibilities at Company: {item.responsibilities}
+                        </p>
+                        <div className="experience-dates">
+                            <p className="start-date-experience">
+                                Start Date: {item.startDate}
+                            </p>
+                            <p className="end-date-experience">
+                                End Date: {item.endDate}
+                            </p>
+                        </div>
                     </div>
                 ))}
             </div>

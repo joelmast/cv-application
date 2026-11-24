@@ -65,7 +65,9 @@ function Education({ onUpdate }) {
     return (
         <>
             <h1 className="education-h1">Education</h1>
-            <button onClick={() => newInput()}>Add New</button>
+            <button className="new-btn" onClick={() => newInput()}>
+                Add New
+            </button>
             {educationInfo.map((item) => (
                 <div className="education-div" key={item.id}>
                     <label>

@@ -66,7 +66,9 @@ function Experience({ onUpdate }) {
     return (
         <>
             <h1 className="experience-h1">Experience</h1>
-            <button onClick={() => newInput()}>Add New</button>
+            <button className="new-btn" onClick={() => newInput()}>
+                Add New
+            </button>
             {experienceInfo.map((item) => (
                 <div className="experience-div">
                     <label>

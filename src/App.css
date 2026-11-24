@@ -124,3 +124,23 @@ p {
     left: 11px;
     height: 40px;
 }
+
+.new-btn {
+    background-color: #259b5a;
+    border: #259b5a;
+    border-radius: 7%;
+    width: 6rem;
+}
+
+.new-btn:hover {
+    background-color: #259b5adc;
+}
+.new-btn:active {
+    background-color: #259b5aa1;
+}
+
+.delete-btn {
+    background-color: #f32828e7;
+    border: 2px solid #f32828e7;
+    border-radius: 10px;
+}
